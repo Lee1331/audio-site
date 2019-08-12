@@ -54,30 +54,30 @@
                         <div class="absolute">
                             <h3 class="text-white">Samples</h3>
                             <p class="text-white">Click here to browse our libary</p>
-
+                            <p> url: {{asset('images/cassette.jpeg')}}</p>
                         </div>
                     </div>
         </section>
         <section class="block sm:flex h-108 relative bg-theme-gray">
-            <div class="container">
-                {{-- <p>img2</p> --}}
+            {{-- <div class="container">
                 <img
                 class="
                     object-cover h-108 w-full ...
                     overflow-hidden
                     "
                 src="{{asset('images/mixer.jpg')}}">
-            </div>
-            <div class="container">
-                {{-- <p>img3</p> --}}
+            </div> --}}
+            <image-component src="{{asset('images/mixer.jpg')}}"></image-component>
+
+            {{-- <div class="container">
                 <img
                 class="
-                    {{-- object-contain --}}
                     object-cover h-108 w-full ...
                     overflow-hidden
                     "
                 src="{{asset('images/mic.jpg')}}">
-            </div>
+            </div> --}}
+            <image-component src="{{asset('images/mic.jpg')}}"></image-component>
         </section>
 
     </div>
