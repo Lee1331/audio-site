@@ -1,6 +1,5 @@
 <template>
 <div class="container">
-
     <img
     class="
     object-cover
@@ -18,10 +17,7 @@ export default {
     data(){
         return{
             name(){
-                // return this.src.split('/');
-                // return this.src.substring(this.src.lastIndexOf('/'), -1);
-                let img = this.src.substring(this.src.lastIndexOf('/'), this.src.lastIndexOf('.'));
-                return img;
+                return this.src.substring(this.src.lastIndexOf('/'), this.src.lastIndexOf('.')).slice(1);
             }
         }
     }

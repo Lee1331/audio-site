@@ -1929,16 +1929,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['src'],
   data: function data() {
     return {
       name: function name() {
-        // return this.src.split('/');
-        // return this.src.substring(this.src.lastIndexOf('/'), -1);
-        var img = this.src.substring(this.src.lastIndexOf('/'), this.src.lastIndexOf('.'));
-        return img;
+        return this.src.substring(this.src.lastIndexOf('/'), this.src.lastIndexOf('.')).slice(1);
       }
     };
   }
