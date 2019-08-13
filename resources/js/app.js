@@ -33,4 +33,4 @@ const app = new Vue({
     el: '#app',
 });
 
-Vue.directive('lazyload', LazyLoadDirective);
+// Vue.directive('lazyload', LazyLoadDirective);

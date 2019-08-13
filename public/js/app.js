@@ -1929,14 +1929,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['src'],
+  props: {
+    src: {
+      type: String,
+      required: true
+    }
+  },
   data: function data() {
     return {
-      name: function name() {
-        return this.src.substring(this.src.lastIndexOf('/'), this.src.lastIndexOf('.')).slice(1);
-      }
+      hover: false
     };
+  },
+  computed: {
+    name: function name() {
+      return this.src.substring(this.src.lastIndexOf('/'), this.src.lastIndexOf('.')).slice(1);
+    }
   }
 });
 
@@ -1951,8 +1975,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
 //
 //
 //
@@ -37348,12 +37370,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "\n    relative\n    text-center" }, [
     _c("img", {
       staticClass:
         "\n    object-cover\n    h-108\n    w-full ...\n    overflow-hidden\n    ",
-      attrs: { src: _vm.src, alt: _vm.name() }
-    })
+      attrs: { src: _vm.src, alt: this.name },
+      on: {
+        mouseover: function($event) {
+          _vm.hover = true
+        },
+        mouseleave: function($event) {
+          _vm.hover = false
+        }
+      }
+    }),
+    _vm._v(" "),
+    _vm.hover
+      ? _c("div", { staticClass: "absolute bg-red-500" }, [
+          _c("h3", { staticClass: "text-white" }, [_vm._v("Samples")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "text-white" }, [
+            _vm._v("Click here to browse our libary")
+          ])
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
@@ -37382,16 +37422,14 @@ var render = function() {
     "nav",
     {
       staticClass:
-        "sticky top-0 flex items-center flex-wrap bg-black h-2/12 p-3  text-white\n    justify-center sm:justify-between\n"
+        "z-40 sticky top-0 flex sm:content-center items-center bg-black h-2/12 p-3 text-white justify-center sm:justify-between"
     },
     [
-      _c(
-        "div",
-        { class: _vm.open ? "block" : "justify-between" },
-        [_vm._m(0), _vm._v(" "), _c("hamburger-component")],
-        1
-      )
-    ]
+      _c("div", { class: _vm.open ? "block" : "justify-between" }, [_vm._m(0)]),
+      _vm._v(" "),
+      _c("hamburger-component")
+    ],
+    1
   )
 }
 var staticRenderFns = [
@@ -49584,8 +49622,7 @@ Vue.component('hamburger-component', __webpack_require__(/*! ./components/Hambur
 
 var app = new Vue({
   el: '#app'
-});
-Vue.directive('lazyload', LazyLoadDirective);
+}); // Vue.directive('lazyload', LazyLoadDirective);
 
 /***/ }),
 

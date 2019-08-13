@@ -25,58 +25,35 @@
     {{-- h-screen overflow-hidden --}}
     h-full
     ">
-        <section class="flex
+        {{-- <section class="flex
         h-108 relative bg-theme-gray
-        {{-- sm:h-64 --}}
-        ">
-                {{-- <div class="bg-local ..." style="background-image: url({{asset('images/cassette.jpeg')}})">
-                    <p>img1</p>
-                </div> --}}
-                {{-- <div
-                class="bg-local ... py-20"
-                style="background-image: url({{asset('images/cassette.jpeg')}})"></div> --}}
-                {{-- <p>img1</p> --}}
+        "> --}}
+        <section class="block sm:flex h-108 bg-theme-gray">
 
-                    {{-- <div
-                        class="relative"
-                    > --}}
-
-                        <img
+                        {{-- <img
                         class="
-                        {{-- object-cover h-64 w-full ... --}}
-                        {{-- object-fit h-2/5 w-full ... --}}
                         object-cover
-                        {{-- p-12  --}}
                         w-full ...
                         overflow-hidden
                         "
-                        src="{{asset('images/cassette.jpeg')}}">
+                        src="{{asset('images/cassette.jpeg')}}"
+
+                        >
                         <div class="absolute">
                             <h3 class="text-white">Samples</h3>
                             <p class="text-white">Click here to browse our libary</p>
                             <p> url: {{asset('images/cassette.jpeg')}}</p>
-                        </div>
-                    </div>
-        </section>
-        <section class="block sm:flex h-108 relative bg-theme-gray">
-            {{-- <div class="container">
-                <img
-                class="
-                    object-cover h-108 w-full ...
-                    overflow-hidden
-                    "
-                src="{{asset('images/mixer.jpg')}}">
-            </div> --}}
-            <image-component src="{{asset('images/mixer.jpg')}}"></image-component>
+                        </div> --}}
+            <image-component src="{{asset('images/cassette.jpeg')}}"></image-component>
 
-            {{-- <div class="container">
-                <img
-                class="
-                    object-cover h-108 w-full ...
-                    overflow-hidden
-                    "
-                src="{{asset('images/mic.jpg')}}">
-            </div> --}}
+        </section>
+
+        {{-- <section class="block sm:flex h-108  bg-theme-gray">
+            <image-component src="{{asset('images/mixer.jpg')}}"></image-component>
+            <image-component src="{{asset('images/mic.jpg')}}"></image-component>
+        </section> --}}
+        <section class="block sm:flex h-108  bg-theme-gray">
+            <image-component src="{{asset('images/mixer.jpg')}}"></image-component>
             <image-component src="{{asset('images/mic.jpg')}}"></image-component>
         </section>
 
