@@ -1892,6 +1892,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1945,6 +1948,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     src: {
@@ -1954,7 +1980,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      hover: false
+      hover: false,
+      // blendMode: 'luminosity',
+      item: {
+        image: this.src
+      }
     };
   },
   computed: {
@@ -1975,6 +2005,19 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -37315,9 +37358,18 @@ var staticRenderFns = [
         },
         [
           _c("h3", { staticClass: "block sm:inline-block text-xl mr-4" }, [
-            _vm._v("Samples")
+            _vm._v("Store")
           ])
         ]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "navbar-item block sm:inline-block hover:text-theme-red",
+          attrs: { href: "" }
+        },
+        [_c("h3", { staticClass: " text-xl mr-4" }, [_vm._v("Releases")])]
       ),
       _vm._v(" "),
       _c(
@@ -37370,31 +37422,47 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "\n    relative\n    text-center" }, [
-    _c("img", {
-      staticClass:
-        "\n    object-cover\n    h-108\n    w-full ...\n    overflow-hidden\n    ",
-      attrs: { src: _vm.src, alt: this.name },
-      on: {
-        mouseover: function($event) {
-          _vm.hover = true
+  return _c(
+    "div",
+    { staticClass: "\n    block sm:flex h-108 w-full p-3\n\n    " },
+    [
+      _c(
+        "div",
+        {
+          class:
+            "bg-cover bg-center w-full cursor-pointer flex content-center bg-theme-black opacity-90",
+          staticStyle: { "background-blend-mode": "luminosity" },
+          style: { backgroundImage: "url(" + _vm.item.image + ")" },
+          on: {
+            mouseover: function($event) {
+              _vm.hover = true
+            },
+            mouseleave: function($event) {
+              _vm.hover = false
+            }
+          }
         },
-        mouseleave: function($event) {
-          _vm.hover = false
-        }
-      }
-    }),
-    _vm._v(" "),
-    _vm.hover
-      ? _c("div", { staticClass: "absolute bg-red-500" }, [
-          _c("h3", { staticClass: "text-white" }, [_vm._v("Samples")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-white" }, [
-            _vm._v("Click here to browse our libary")
-          ])
-        ])
-      : _vm._e()
-  ])
+        [
+          _vm.hover
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "absolute\n        bg-center\n        bg-red-500 z-10"
+                },
+                [
+                  _c("h3", { staticClass: "text-white" }, [_vm._v("Samples")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-white" }, [
+                    _vm._v("Click here to browse our libary")
+                  ])
+                ]
+              )
+            : _vm._e()
+        ]
+      )
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -37422,14 +37490,18 @@ var render = function() {
     "nav",
     {
       staticClass:
-        "z-40 sticky top-0 flex sm:content-center items-center bg-black h-2/12 p-3 text-white justify-center sm:justify-between"
+        "z-50 sticky flex\n<!-- top-0  -->\n<!--sm:content-center items-center-->\nbg-black h-2/12 p-3 text-white justify-center sm:justify-between"
     },
     [
-      _c("div", { class: _vm.open ? "block" : "justify-between" }, [_vm._m(0)]),
+      _vm._m(0),
       _vm._v(" "),
-      _c("hamburger-component")
-    ],
-    1
+      _c(
+        "div",
+        { class: _vm.open ? "block" : "justify-between" },
+        [_c("hamburger-component")],
+        1
+      )
+    ]
   )
 }
 var staticRenderFns = [
@@ -37439,7 +37511,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex-no-shrink mr-6" }, [
       _c("a", { staticClass: "navbar-brand pr-3", attrs: { href: "" } }, [
-        _c("h1", { staticClass: "inline text-xl" }, [_vm._v("Provayer")])
+        _c("h1", { staticClass: "inline text-xl" }, [_vm._v("test")])
       ])
     ])
   }

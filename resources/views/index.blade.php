@@ -28,7 +28,12 @@
         {{-- <section class="flex
         h-108 relative bg-theme-gray
         "> --}}
-        <section class="block sm:flex h-108 bg-theme-gray">
+
+        <section class="
+        {{-- block  --}}
+        sm:flex h-108
+        {{-- bg-theme-gray --}}
+        ">
 
                         {{-- <img
                         class="
@@ -45,15 +50,15 @@
                             <p> url: {{asset('images/cassette.jpeg')}}</p>
                         </div> --}}
             <image-component src="{{asset('images/cassette.jpeg')}}"></image-component>
-
         </section>
 
-        {{-- <section class="block sm:flex h-108  bg-theme-gray">
+        <section class="
+        {{-- block  --}}
+        sm:flex h-108
+        {{-- bg-white --}}
+        ">
             <image-component src="{{asset('images/mixer.jpg')}}"></image-component>
             <image-component src="{{asset('images/mic.jpg')}}"></image-component>
-        </section> --}}
-        <section class="block sm:flex h-108  bg-theme-gray">
-            <image-component src="{{asset('images/mixer.jpg')}}"></image-component>
             <image-component src="{{asset('images/mic.jpg')}}"></image-component>
         </section>
 

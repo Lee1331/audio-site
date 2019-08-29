@@ -10,7 +10,10 @@
                 <div class="text-sm sm:flex-grow">
 
                 <a class="navbar-item block sm:inline-block hover:text-theme-red" href="">
-                    <h3 class="block sm:inline-block text-xl mr-4">Samples</h3>
+                    <h3 class="block sm:inline-block text-xl mr-4">Store</h3>
+                </a>
+                <a class="navbar-item block sm:inline-block hover:text-theme-red" href="">
+                    <h3 class=" text-xl mr-4">Releases</h3>
                 </a>
                 <a class="navbar-item block sm:inline-block hover:text-theme-red" href="">
                     <h3 class=" text-xl mr-4">Projects</h3>

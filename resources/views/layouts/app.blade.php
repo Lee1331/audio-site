@@ -20,8 +20,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bg-theme-white
-{{-- bg-black --}}
+<body class="
+{{-- bg-theme-white --}}
+bg-black
 {{-- opacity-90 --}}
 {{-- h-screen --}}
 ">
@@ -30,7 +31,7 @@
 
         <nav class="sticky top-0 flex items-center flex-wrap bg-black h-2/12 p-3  text-white
             {{-- justify-around sm:justify-between --}}
-            justify-center sm:justify-between
+            justify-between
         ">
             <div class="flex-no-shrink mr-6">
                 <a class="navbar-brand pr-3" href="{{ url('/') }}">
