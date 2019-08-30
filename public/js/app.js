@@ -1892,9 +1892,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1919,24 +1916,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2005,13 +1984,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -37322,17 +37294,24 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "block sm:hidden" }, [
-      _c(
-        "button",
-        {
-          staticClass:
-            "flex items-center px-3 py-2 border rounded border-white hover:text-theme-red hover:border-white",
-          on: { click: _vm.toggle }
-        },
-        [_c("i", { staticClass: "fa fa-bars" })]
-      )
-    ]),
+    _c(
+      "div",
+      {
+        staticClass: "block sm:hidden",
+        class: _vm.open ? "flex justify-end" : ""
+      },
+      [
+        _c(
+          "button",
+          {
+            staticClass:
+              "flex items-center px-3 py-2 border rounded border-white hover:text-theme-red hover:border-white",
+            on: { click: _vm.toggle }
+          },
+          [_c("i", { staticClass: "fa fa-bars" })]
+        )
+      ]
+    ),
     _vm._v(" "),
     _c(
       "div",
@@ -37340,67 +37319,103 @@ var render = function() {
         staticClass: "w-full flex-grow sm:flex sm:items-center sm:w-auto",
         class: _vm.open ? "block" : "hidden"
       },
-      [_vm._m(0)]
+      [
+        _c(
+          "div",
+          {
+            staticClass: "text-sm sm:flex-grow",
+            class: _vm.open ? "text-right mr-0" : ""
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "navbar-item block sm:inline-block hover:text-theme-red",
+                attrs: { href: "" }
+              },
+              [
+                _c(
+                  "h3",
+                  {
+                    staticClass: "block sm:inline-block text-xl",
+                    class: _vm.open ? "" : "mr-4"
+                  },
+                  [_vm._v("Store")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "navbar-item block sm:inline-block hover:text-theme-red",
+                attrs: { href: "" }
+              },
+              [
+                _c(
+                  "h3",
+                  { staticClass: " text-xl", class: _vm.open ? "" : "mr-4" },
+                  [_vm._v("Releases")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "navbar-item block sm:inline-block hover:text-theme-red",
+                attrs: { href: "" }
+              },
+              [
+                _c(
+                  "h3",
+                  { staticClass: " text-xl", class: _vm.open ? "" : "mr-4" },
+                  [_vm._v("Projects")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "navbar-item block sm:inline-block hover:text-theme-red",
+                attrs: { href: "" }
+              },
+              [
+                _c(
+                  "h3",
+                  { staticClass: " text-xl", class: _vm.open ? "" : "mr-4" },
+                  [_vm._v("Reaktor")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "navbar-item block sm:inline-block hover:text-theme-red",
+                attrs: { href: "" }
+              },
+              [
+                _c(
+                  "h3",
+                  { staticClass: " text-xl", class: _vm.open ? "" : "mr-4" },
+                  [_vm._v("Get In Contact")]
+                )
+              ]
+            )
+          ]
+        )
+      ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-sm sm:flex-grow" }, [
-      _c(
-        "a",
-        {
-          staticClass: "navbar-item block sm:inline-block hover:text-theme-red",
-          attrs: { href: "" }
-        },
-        [
-          _c("h3", { staticClass: "block sm:inline-block text-xl mr-4" }, [
-            _vm._v("Store")
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "navbar-item block sm:inline-block hover:text-theme-red",
-          attrs: { href: "" }
-        },
-        [_c("h3", { staticClass: " text-xl mr-4" }, [_vm._v("Releases")])]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "navbar-item block sm:inline-block hover:text-theme-red",
-          attrs: { href: "" }
-        },
-        [_c("h3", { staticClass: " text-xl mr-4" }, [_vm._v("Projects")])]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "navbar-item block sm:inline-block hover:text-theme-red",
-          attrs: { href: "" }
-        },
-        [_c("h3", { staticClass: " text-xl mr-4" }, [_vm._v("Reaktor")])]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "navbar-item block sm:inline-block hover:text-theme-red",
-          attrs: { href: "" }
-        },
-        [_c("h3", { staticClass: " text-xl mr-4" }, [_vm._v("Get In Contact")])]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -37490,14 +37505,14 @@ var render = function() {
     "nav",
     {
       staticClass:
-        "z-50 sticky flex\n<!-- top-0  -->\n<!--sm:content-center items-center-->\nbg-black h-2/12 p-3 text-white justify-center sm:justify-between"
+        "z-50 sticky top-0 flex bg-black h-2/12 py-3 px-5 text-white justify-between"
     },
     [
       _vm._m(0),
       _vm._v(" "),
       _c(
         "div",
-        { class: _vm.open ? "block" : "justify-between" },
+        { class: _vm.open ? "flex justify-center" : "flex justify-end" },
         [_c("hamburger-component")],
         1
       )
@@ -37509,9 +37524,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex-no-shrink mr-6" }, [
+    return _c("div", { staticClass: "flex-no-shrink mr-6 justify-start" }, [
       _c("a", { staticClass: "navbar-brand pr-3", attrs: { href: "" } }, [
-        _c("h1", { staticClass: "inline text-xl" }, [_vm._v("test")])
+        _c("h1", { staticClass: "inline text-xl" }, [_vm._v("Provayer")])
       ])
     ])
   }

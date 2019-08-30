@@ -1,27 +1,9 @@
 <template>
-<!-- <div class="
-    relative
-    text-center
-    h-108
-    "> -->
 
 <div class="
     block sm:flex h-108 w-full p-3
 
     ">
-    <!-- <img
-    class="
-    object-cover
-    overflow-hidden
-    h-108
-    w-full ...
-    z-0
-    "
-    :src="src"
-    :alt="this.name"
-    @mouseover="hover = true"
-    @mouseleave="hover = false"
-    > -->
 
     <!-- min-h-screen bg-grey bg-cover flex items-end block md:fixed w-full md:w-1/2 shadow-md -->
 

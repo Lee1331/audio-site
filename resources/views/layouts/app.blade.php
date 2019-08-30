@@ -29,19 +29,17 @@ bg-black
     <div id="app">
 
 
-        <nav class="sticky top-0 flex items-center flex-wrap bg-black h-2/12 p-3  text-white
-            {{-- justify-around sm:justify-between --}}
-            justify-between
-        ">
+        {{-- justify-around sm:justify-between --}}
+        {{-- <nav class="sticky top-0 flex flex-wrap bg-black h-2/12 py-3 px-5 text-white justify-between">
             <div class="flex-no-shrink mr-6">
                 <a class="navbar-brand pr-3" href="{{ url('/') }}">
                     <h1 class="inline text-xl">Provayer</h1>
                 </a>
             </div>
             <hamburger-component></hamburger-component>
-        </nav>
+        </nav> --}}
 
-        {{-- <navbar-component></navbar-component> --}}
+        <navbar-component></navbar-component>
 
 
             {{-- <main class="container mx-auto py-4"> --}}
