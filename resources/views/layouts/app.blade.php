@@ -27,31 +27,10 @@ bg-black
 {{-- h-screen --}}
 ">
     <div id="app">
-
-
-        {{-- justify-around sm:justify-between --}}
-        {{-- <nav class="sticky top-0 flex flex-wrap bg-black h-2/12 py-3 px-5 text-white justify-between">
-            <div class="flex-no-shrink mr-6">
-                <a class="navbar-brand pr-3" href="{{ url('/') }}">
-                    <h1 class="inline text-xl">Provayer</h1>
-                </a>
-            </div>
-            <hamburger-component></hamburger-component>
-        </nav> --}}
-
         <navbar-component></navbar-component>
-
-
-            {{-- <main class="container mx-auto py-4"> --}}
-            <main class="
-            {{--
-                flex justify-center
-            flex-wrap
-            --}}
-            {{-- opacity-90 --}}
-            " >
-                @yield('content')
-            </main>
+        <main>
+            @yield('content')
+        </main>
     </div>
 </body>
 </html>

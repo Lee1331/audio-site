@@ -31,7 +31,7 @@
 
         <section class="
         {{-- block  --}}
-        sm:flex h-108
+        sm:flex h-108 content-center
         {{-- bg-theme-gray --}}
         ">
 
@@ -54,7 +54,7 @@
 
         <section class="
         {{-- block  --}}
-        sm:flex h-108
+        sm:flex h-108 content-center
         {{-- bg-white --}}
         ">
             <image-component src="{{asset('images/mixer.jpg')}}"></image-component>

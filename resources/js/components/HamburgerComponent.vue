@@ -20,7 +20,7 @@
                     <h3 class=" text-xl" :class="open ? '' : 'mr-4'">Reaktor</h3>
                 </a>
                 <a class="navbar-item block sm:inline-block hover:text-theme-red" href="">
-                    <h3 class=" text-xl" :class="open ? '' : 'mr-4'">Get In Contact</h3>
+                    <h3 class=" text-xl" :class="open ? '' : 'mr-4'">Contact</h3>
                 </a>
             </div>
         </div>
