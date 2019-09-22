@@ -2022,6 +2022,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     src: {
@@ -6551,7 +6593,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".zoom[data-v-702c940d]:hover {\n  transform: scale(1.25);\n}\n.fade-enter[data-v-702c940d] {\n  opacity: 0;\n}\n.fade-enter-active[data-v-702c940d] {\n  transition-duration: 0.3s;\n  transition: opacity 0.3s;\n  transition-timing-function: ease;\n  /* background-blend-mode: luminosity; */\n}\n.fade-leave[data-v-702c940d] {\n}\n.fade-leave-active[data-v-702c940d] {\n  transition-duration: 0.3s;\n  transition: opacity 1s;\n  opacity: 0;\n  transition-timing-function: ease;\n  /* background-blend-mode: normal; */\n}\n", ""]);
+exports.push([module.i, ".zoom[data-v-702c940d]:hover {\n  /* transform: scale(1.25); */\n}\n\n/*\n    .zoom-enter {\n        transform: scale(0);\n    }\n    .zoom-enter-active {\n        transition-duration: 0.3s;\n        transition-timing-function: ease;\n    }\n\n    @keyframes bounce-in {\n        0% {\n            transform: scale(0);\n        }\n        50% {\n            transform: scale(1.5);\n        }\n        100% {\n            transform: scale(1);\n        }\n    } */\n.fade-enter[data-v-702c940d] {\n  opacity: 0;\n}\n.fade-enter-active[data-v-702c940d] {\n  transition-duration: 0.3s;\n  transition: opacity 0.3s;\n  transition-timing-function: ease;\n  /* background-blend-mode: luminosity; */\n}\n.fade-leave[data-v-702c940d] {\n}\n.fade-leave-active[data-v-702c940d] {\n  transition-duration: 0.3s;\n  transition: opacity 0.5s;\n  opacity: 0;\n  transition-timing-function: ease;\n  /* background-blend-mode: normal; */\n}\n", ""]);
 
 // exports
 
@@ -38155,44 +38197,105 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "block sm:flex h-108 w-full p-3" }, [
-    _c(
-      "div",
-      {
-        staticClass: "zoom",
-        class:
-          "bg-cover bg-center w-full h-full cursor-pointer bg-theme-black text-center h-full opacity-90",
-        staticStyle: { "background-blend-mode": "luminosity" },
-        style: { backgroundImage: "url(" + _vm.item.image + ")" },
-        on: {
-          mouseover: function($event) {
-            ;(_vm.hover = true), (_vm.zoom = true)
-          },
-          mouseleave: function($event) {
-            ;(_vm.hover = false), (_vm.zoom = false)
+  return _c(
+    "div",
+    { staticClass: "block sm:flex h-108 w-full p-3" },
+    [
+      _c(
+        "transition",
+        {
+          attrs: {
+            "enter-active-class": "animated bounce",
+            "leave-active-class": "animated shake"
           }
-        }
-      },
-      [
-        _c("transition", { attrs: { name: "fade" } }, [
-          _vm.hover
-            ? _c("div", { staticClass: "z-10 h-full py-40" }, [
-                _c("div", { staticClass: "bg-blue-200 py-7" }, [
-                  _c("h3", { staticClass: "block text-white" }, [
-                    _vm._v("Samples")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "block text-white" }, [
-                    _vm._v("Click here to browse our libary")
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "zoom animated zoomIn",
+              class:
+                "bg-cover bg-center w-full h-full cursor-pointer bg-theme-black text-center h-full opacity-90 {zoom ? animated zoomIn : animated zoomOut} ",
+              staticStyle: { "background-blend-mode": "normal" },
+              style: { backgroundImage: "url(" + _vm.item.image + ")" },
+              on: {
+                mouseover: function($event) {
+                  ;(_vm.hover = true), (_vm.zoom = true)
+                },
+                mouseleave: function($event) {
+                  ;(_vm.hover = false), (_vm.zoom = false)
+                }
+              }
+            },
+            [
+              _vm.hover
+                ? _c("div", { staticClass: "z-10 h-full overflow-hidden" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\n                                    h-full overflow-hidden animated fadeInUp bg-black\n                                "
+                      },
+                      [
+                        _c("div", { staticClass: "py-2 opacity-100" }, [
+                          _c("div", { staticClass: "block bg-theme-red " }, [
+                            _c("h3", { staticClass: "text-white" }, [
+                              _c("a", { attrs: { href: "#" } }, [
+                                _vm._v("Samples")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("hr"),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "text-white" }, [
+                              _vm._v("Click here to browse our libary")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "featured-content flex items-center pt-2"
+                            },
+                            [
+                              _c("div", { staticClass: "item-1 flex-1 " }, [
+                                _c("h3", { staticClass: "text-white" }, [
+                                  _c("a", { attrs: { href: "#" } }, [
+                                    _vm._v("Pack 1")
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "item-2 flex-1 " }, [
+                                _c("h3", { staticClass: "text-white" }, [
+                                  _c("a", { attrs: { href: "#" } }, [
+                                    _vm._v("Pack 2")
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "item-3 flex-1 " }, [
+                                _c("h3", { staticClass: "text-white" }, [
+                                  _c("a", { attrs: { href: "#" } }, [
+                                    _vm._v("Pack 3")
+                                  ])
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
                   ])
-                ])
-              ])
-            : _vm._e()
-        ])
-      ],
-      1
-    )
-  ])
+                : _vm._e()
+            ]
+          )
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

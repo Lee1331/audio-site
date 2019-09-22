@@ -161,7 +161,8 @@ module.exports = {
       '108': '27rem',
       '112': '28rem',
       '128': '32rem',
-      'half' : '50%'
+      'half' : '50%',
+      '1/4' : '25%',
     },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {

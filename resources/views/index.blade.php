@@ -29,33 +29,14 @@
         h-108 relative bg-theme-gray
         "> --}}
 
-        <section class="
-        {{-- block  --}}
-        sm:flex h-108 content-center
-        {{-- bg-theme-gray --}}
-        ">
-
-                        {{-- <img
-                        class="
-                        object-cover
-                        w-full ...
-                        overflow-hidden
-                        "
-                        src="{{asset('images/cassette.jpeg')}}"
-
-                        >
-                        <div class="absolute">
-                            <h3 class="text-white">Samples</h3>
-                            <p class="text-white">Click here to browse our libary</p>
-                            <p> url: {{asset('images/cassette.jpeg')}}</p>
-                        </div> --}}
-            <image-component src="{{asset('images/cassette.jpeg')}}"></image-component>
+        <section class="sm:flex h-108 content-center">
+        {{-- <section class="sm:flex h-halfscreen content-center"> --}}
+            <image-component src="{{ asset('images/cassette.jpeg')}}"></image-component>
         </section>
 
         <section class="
-        {{-- block  --}}
         sm:flex h-108 content-center
-        {{-- bg-white --}}
+        {{-- sm:flex h-halfscreen content-center --}}
         ">
             <image-component src="{{asset('images/mixer.jpg')}}"></image-component>
             <image-component src="{{asset('images/mic.jpg')}}"></image-component>
